@@ -3,21 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plateforme d'Évaluation</title>
-    <!-- Tailwind CSS for quick styling -->
+    <title>OIDP Afrique - Évaluation Apprenant</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        oidp: {
+                            orange: '#E8751A',
+                            'orange-dark': '#C85F0E',
+                            blue: '#3AAFE0',
+                            'blue-dark': '#2E8FBA',
+                            dark: '#333333',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans min-h-screen">
-    
-    <header class="bg-blue-600 text-white shadow-md">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold"><a href="{{ route('evaluation.index') }}">Évaluation Apprenant</a></h1>
+<body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col">
+
+    <header class="bg-white shadow-md border-b-4 border-oidp-orange">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="{{ route('evaluation.index') }}" class="flex items-center space-x-3">
+                <img src="{{ asset('logo-oidp.jpg') }}" alt="OIDP Afrique" class="h-12">
+                <span class="text-oidp-dark font-bold text-lg hidden sm:inline">Évaluation Apprenant</span>
+            </a>
             @auth
-            <div class="flex items-center">
-                <span class="text-white mr-4">Admin</span>
-                <form action="{{ route('logout') }}" method="POST">
+            <div class="flex items-center space-x-3">
+                <a href="{{ route('admin.index') }}" class="text-oidp-orange hover:text-oidp-orange-dark font-medium text-sm">Administration</a>
+                <form action="{{ route('logout') }}" method="POST" class="inline">
                     @csrf
-                    <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-3 rounded text-sm">
+                    <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-bold py-1.5 px-3 rounded text-sm transition">
                         Déconnexion
                     </button>
                 </form>
@@ -26,12 +45,12 @@
         </div>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
+    <main class="flex-1 container mx-auto px-4 py-8">
         @yield('content')
     </main>
 
-    <footer class="text-center py-6 text-gray-500 text-sm">
-        &copy; {{ date('Y') }} - Plateforme d'Évaluation
+    <footer class="bg-oidp-dark text-gray-300 text-center py-4 text-sm">
+        &copy; {{ date('Y') }} OIDP Afrique / IOPD Africa — Plateforme d'Évaluation
     </footer>
 </body>
 </html>

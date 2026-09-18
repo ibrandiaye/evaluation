@@ -2,55 +2,51 @@
 
 @section('content')
 <div class="max-w-4xl mx-auto">
-    <div class="mb-6 flex justify-between items-center">
-        <a href="{{ route('admin.index') }}" class="text-blue-600 hover:underline">&larr; Retour aux évaluations</a>
+    <div class="mb-6">
+        <a href="{{ route('admin.index') }}" class="text-oidp-orange hover:underline font-medium">← Retour aux évaluations</a>
     </div>
 
-    <div class="bg-white rounded-lg shadow-md p-8 mb-8">
-        <h2 class="text-2xl font-bold text-gray-800 mb-2">Détails de l'évaluation</h2>
-        <p class="text-lg text-gray-600 mb-6">Candidat : <span class="font-semibold">{{ $evaluation->participant_name }}</span></p>
-        
-        @php
-            $percentage = $evaluation->total_questions > 0 ? ($evaluation->score / $evaluation->total_questions) * 100 : 0;
-            $color = $percentage >= 50 ? 'text-green-600' : 'text-red-600';
-        @endphp
-
-        <div class="text-4xl font-black {{ $color }} mb-2">
-            {{ $evaluation->score }} / {{ $evaluation->total_questions }}
+    {{-- Candidate Summary --}}
+    <div class="bg-white rounded-xl shadow-md p-6 mb-6 border-l-4 border-oidp-orange">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+            <div>
+                <h2 class="text-xl font-bold text-oidp-dark">{{ $evaluation->participant_name }}</h2>
+                <p class="text-gray-500 text-sm">Passé le {{ $evaluation->created_at->format('d/m/Y à H:i') }}</p>
+            </div>
+            @php
+                $percentage = $evaluation->total_questions > 0 ? ($evaluation->score / $evaluation->total_questions) * 100 : 0;
+            @endphp
+            <div class="mt-4 sm:mt-0 text-center">
+                <div class="text-4xl font-black {{ $percentage >= 50 ? 'text-green-600' : 'text-red-600' }}">
+                    {{ number_format($percentage, 0) }}%
+                </div>
+                <p class="text-gray-500 text-sm font-medium">{{ $evaluation->score }} / {{ $evaluation->total_questions }}</p>
+            </div>
         </div>
-        <p class="text-gray-500 font-medium">Soit {{ number_format($percentage, 0) }}% de réussite</p>
     </div>
 
-    <h3 class="text-xl font-bold mb-4">Réponses du candidat</h3>
-    
+    <h3 class="text-lg font-bold text-oidp-dark mb-4">Détail des réponses</h3>
+
     @foreach($evaluation->answers as $index => $answer)
-    <div class="bg-white rounded-lg shadow-md p-6 mb-4 border-l-4 {{ $answer->is_correct ? 'border-green-500' : 'border-red-500' }}">
-        <h4 class="text-lg font-medium text-gray-900 mb-3">
-            <span class="font-bold mr-1">{{ $index + 1 }}.</span> {{ $answer->question->content }}
-        </h4>
-        
-        <div class="pl-4">
-            <p class="mb-2">
-                <span class="text-gray-600 text-sm">Réponse du candidat :</span><br>
-                <span class="font-medium {{ $answer->is_correct ? 'text-green-600' : 'text-red-600' }}">
-                    {{ $answer->option->content }} 
-                    @if($answer->is_correct)
-                        (Correct)
-                    @else
-                        (Incorrect)
-                    @endif
-                </span>
-            </p>
-            
-            @if(!$answer->is_correct)
-                @php
-                    $correctOption = $answer->question->options->where('is_correct', true)->first();
-                @endphp
-                <p>
-                    <span class="text-gray-600 text-sm">Bonne réponse attendue :</span><br>
-                    <span class="font-medium text-green-600">{{ $correctOption ? $correctOption->content : 'Non définie' }}</span>
+    <div class="bg-white rounded-xl shadow-sm p-5 mb-3 border-l-4 {{ $answer->is_correct ? 'border-green-500' : 'border-red-500' }}">
+        <div class="flex items-start">
+            <span class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold mr-3 {{ $answer->is_correct ? 'bg-green-500' : 'bg-red-500' }}">
+                {{ $answer->is_correct ? '✓' : '✗' }}
+            </span>
+            <div class="flex-1">
+                <p class="text-oidp-dark font-medium text-sm mb-2">{{ $index + 1 }}. {{ $answer->question->content }}</p>
+                <p class="text-sm">
+                    <span class="text-gray-500">Réponse :</span>
+                    <span class="{{ $answer->is_correct ? 'text-green-600' : 'text-red-600' }} font-medium">{{ $answer->option->content }}</span>
                 </p>
-            @endif
+                @if(!$answer->is_correct)
+                    @php $correctOption = $answer->question->options->where('is_correct', true)->first(); @endphp
+                    <p class="text-sm mt-1">
+                        <span class="text-gray-500">Bonne réponse :</span>
+                        <span class="text-green-600 font-medium">{{ $correctOption ? $correctOption->content : '—' }}</span>
+                    </p>
+                @endif
+            </div>
         </div>
     </div>
     @endforeach
