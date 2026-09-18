@@ -1,0 +1,508 @@
+[
+  {
+    "question": "Quel aspect caractérise principalement le principe de solidarité dans la mise en œuvre du budget participatif ?",
+    "options": [
+      "Maximiser les intérêts individuels",
+      "Favoriser la cohésion et l’attention aux enjeux communs",
+      "Augmenter la fiscalité locale",
+      "Encourager l’investissement privé uniquement"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Lors de l’identification des priorités dans un budget participatif, la solidarité incite principalement à :",
+    "options": [
+      "Ignorer les besoins des minorités",
+      "Prendre en compte les besoins collectifs, surtout des groupes vulnérables",
+      "Privilégier uniquement les quartiers les plus riches",
+      "Rendre les processus de consultation facultatifs"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Dans la formulation des intérêts individuels, la solidarité vise à :",
+    "options": [
+      "Renforcer uniquement les revendications personnelles",
+      "Transformer les attentes individuelles en priorités collectives",
+      "Minimiser les consultations publiques",
+      "Augmenter le nombre de projets privés"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "L’une des finalités de la mobilisation communautaire dans l’approche solidaire du budget participatif est de :",
+    "options": [
+      "Favoriser la division entre groupes sociaux",
+      "Permettre la prise en charge collective des enjeux choisis",
+      "Réduire la participation des citoyens",
+      "Limiter l’accès à l’information"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Pourquoi la solidarité est-elle considérée comme un socle des politiques publiques dans le cadre du budget participatif ?",
+    "options": [
+      "Parce qu’elle favorise l’exclusion sociale",
+      "Parce qu’elle permet d’assurer l’équité et l’inclusion dans la prise de décision",
+      "Parce qu’elle augmente les conflits d’intérêts",
+      "Parce qu’elle élimine totalement le dialogue social"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Le principe de transparence, dans la gestion du budget participatif, consiste principalement à :",
+    "options": [
+      "Garder les informations financières confidentielles",
+      "Assurer la circulation et l’accessibilité de l’information budgétaire",
+      "Publier uniquement les résultats finaux",
+      "Limiter l’accès à l’information aux élus"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Qu’entend-on par “redevabilité” dans le contexte budgétaire des collectivités territoriales ?",
+    "options": [
+      "Absence d'obligation de rendre compte",
+      "Obligation pour les responsables de rendre régulièrement des comptes sur l’utilisation des ressources publiques",
+      "Libre utilisation des fonds sans contrôle",
+      "Confidentialité des rapports financiers"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "L’accessibilité de l’information budgétaire signifie que celle-ci doit être :",
+    "options": [
+      "Compréhensible et disponible seulement en format papier",
+      "Accessible physiquement, matériellement et intellectuellement à tous les citoyens",
+      "Réservée aux membres du conseil municipal",
+      "Rédigée uniquement en langage technique"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "Parmi les éléments suivants, lequel illustre un mécanisme approprié de comptes rendus réguliers ?",
+    "options": [
+      "Publication annuelle d’un rapport unique sans débat public",
+      "Réunions publiques périodiques pour présenter et expliquer l’utilisation des ressources publiques",
+      "Diffusion des informations sur demande seulement",
+      "Partage des comptes-rendus aux entreprises partenaires uniquement"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Pourquoi la transparence et la redevabilité sont-elles essentielles dans le budget participatif ?",
+    "options": [
+      "Pour rassurer uniquement les partenaires financiers",
+      "Pour garantir la confiance du public et l’efficacité de la gestion des fonds publics",
+      "Pour éviter la participation citoyenne",
+      "Pour limiter les audits externes"
+    ],
+    "answer": "C"
+  },
+  {
+    "question": "L’efficacité budgétaire, dans le cadre du budget participatif, signifie :",
+    "options": [
+      "Dépenser plus de ressources que nécessaire",
+      "Atteindre les objectifs fixés avec les ressources allouées",
+      "Réduire le nombre de projets financés",
+      "Se concentrer uniquement sur les grands projets",
+      "L’efficience budgétaire",
+      "Mobiliser le maximum de ressources sans se préoccuper des résultats",
+      "Optimiser l’utilisation des ressources pour obtenir le meilleur résultat possible",
+      "Répartir également le budget entre tous les quartiers",
+      "Prioriser les besoins individuels"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Pour garantir l’efficacité et l’efficience dans le budget participatif, il est essentiel de :",
+    "options": [
+      "Affecter les ressources aux projets répondant aux besoins essentiels identifiés par la communauté",
+      "Investir uniquement dans les projets proposés par les élus",
+      "Favoriser les projets spectaculaires",
+      "Négliger l’évaluation des résultats"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Quel indicateur permet de mesurer l’efficience d’un projet financé par le budget participatif ?",
+    "options": [
+      "Le coût du projet par rapport à l’utilité réelle pour la communauté",
+      "Le nombre de participants aux réunions",
+      "La présence des médias locaux",
+      "Le budget total de la collectivité"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Pourquoi l’affectation des ressources budgétaires selon les besoins essentiels des communautés est-elle importante ?",
+    "options": [
+      "Pour répondre uniquement aux attentes politiques",
+      "Pour maximiser l’impact social et l’utilisation judicieuse des fonds publics",
+      "Pour favoriser les dépenses inutiles",
+      "Pour limiter le nombre de projets"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Le principe d’inclusion dans le budget participatif vise principalement à :",
+    "options": [
+      "Impliquer exclusivement les élus",
+      "Permettre à tous les citoyens, y compris les personnes marginalisées et en situation de handicap, de participer au processus",
+      "Privilégier les citoyens actifs seulement",
+      "Limiter la participation à un seul groupe"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "L’égalité équité et inclusion:",
+    "options": [
+      "Offrir les mêmes chances de participation à tous les citoyens, sans discrimination",
+      "Donner la priorité aux besoins des territoires les plus riches",
+      "Restreindre l’accès aux informations",
+      "Favoriser les projets des hommes uniquement"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "L’équité, appliquée au budget participatif, consiste à :",
+    "options": [
+      "Allouer les ressources de façon identique à tous, sans distinction",
+      "Tenir compte des besoins spécifiques des groupes vulnérables et des territoires les plus fragiles",
+      "Exclure les personnes handicapées",
+      "Favoriser systématiquement les mêmes quartiers"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Pourquoi est-il important de veiller à l’inclusion dans le budget participatif ?",
+    "options": [
+      "Pour renforcer la justice sociale et permettre l’expression des besoins spécifiques de chaque catégorie de citoyen",
+      "Pour accélérer la prise de décision",
+      "Pour limiter le nombre de participants",
+      "Pour améliorer la visibilité des élus"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Comment le budget participatif peut-il concrètement promouvoir l’inclusion et l’équité ?",
+    "options": [
+      "En mettant en place des dispositifs d’accessibilité pour les personnes handicapées et en assurant la représentation de groupes marginalisés dans les instances de décision",
+      "En simplifiant les critères de sélection des projets",
+      "En fermant le processus aux territoires fragiles",
+      "En favorisant la centralisation des décisions"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "La transversalité :",
+    "options": [
+      "Limiter la participation aux seuls villages",
+      "Articuler différentes échelles territoriales et assurer la cohérence entre les politiques locales et sectorielles",
+      "Favoriser uniquement les politiques sectorielles",
+      "Centraliser toutes les décisions au niveau national"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Quel avantage procure la transversalité lors de la mise en œuvre des politiques publiques territoriales ?",
+    "options": [
+      "Une fragmentation des actions locales",
+      "L’absence de coordination entre les niveaux territoriaux",
+      "Une meilleure cohérence des initiatives et la prise en compte des spécificités à chaque échelle",
+      "Une indépendance complète de chaque territoire"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Dans le cadre de la transversalité, pourquoi est-il important de territorialiser les politiques publiques ?",
+    "options": [
+      "Pour garantir la même politique dans tous les quartiers",
+      "Pour adapter les politiques aux besoins et spécificités de chaque territoire",
+      "Pour limiter l’autonomie des collectivités locales",
+      "Pour uniformiser les priorités nationales"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Quel processus reflète le mieux la transversalité dans le budget participatif ?",
+    "options": [
+      "Faire participer uniquement les habitants de la ville",
+      "Associer différents niveaux territoriaux (village, quartier, ville, région) à l’identification et à la priorisation des projets",
+      "Mélanger les politiques sociales et économiques sans concertation",
+      "Oublier les réalités locales dans la planification"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "La cohérence des initiatives locales permise par la transversalité signifie :",
+    "options": [
+      "Une absence d’alignement entre les besoins locaux et les politiques publiques sectorielles",
+      "Une coordination pour éviter la duplication des actions et optimiser l’impact des projets",
+      "Une gestion sectorielle sans consultation territoriale",
+      "Un cloisonnement des décisions entre les différents services"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "À quelle étape du budget participatif les citoyens doivent-ils être impliqués pour identifier les priorités de développement de leur collectivité ?",
+    "options": [
+      "Lors de l’élaboration du budget national",
+      "Lors de l’identification des besoins et priorisation",
+      "Uniquement pendant la mise en œuvre des projets",
+      "Seulement au moment de l’évaluation finale",
+      "Le principe fondamental de la participation dans le budget participatif repose sur",
+      "La délégation complète des décisions aux élus locaux",
+      "La consultation exclusive des experts techniques",
+      "L’implication des segments représentatifs de la population à toutes les étapes",
+      "La réduction du nombre d’acteurs pour gagner du temps"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "La participation des citoyens dans le suivi et l’évaluation permet principalement :",
+    "options": [
+      "De vérifier uniquement l’exécution financière",
+      "D’assurer la transparence, la redevabilité et l’appropriation citoyenne",
+      "D’accélérer la mise en œuvre des projets sans contrôle",
+      "De remplacer le rôle des élus locaux"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Parmi les étapes suivantes, laquelle n’appartient pas au processus du budget participatif ?",
+    "options": [
+      "Diagnostic participatif",
+      "Identification des besoins",
+      "Mise en œuvre des projets",
+      "Ratification par le Parlement national"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Quel est l’intérêt d’impliquer des segments représentatifs (femmes, jeunes, personnes vulnérables, etc.) dans le budget participatif ?",
+    "options": [
+      "Favoriser uniquement les projets qui concernent les groupes majoritaires",
+      "Garantir l’inclusion, l’équité et la prise en compte des divers besoins de la communauté",
+      "Réduire le nombre de propositions de projets",
+      "Accélérer la validation administrative du budget"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Quel acte marque le lancement officiel du budget participatif dans une collectivité territoriale ?",
+    "options": [
+      "La validation par le comité de suivi",
+      "La délibération du conseil local affirmant la volonté politique",
+      "L’approbation des citoyens par référendum",
+      "La communication d’ouverture"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Lors du lancement, quelle décision importante doit être prise ?",
+    "options": [
+      "Définir le montant réservé au budget participatif et les critères d’attribution",
+      "Désigner les responsables de communication",
+      "Organiser des campagnes publicitaires",
+      "Élaborer les rapports financiers finaux"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Parmi les éléments suivants, lequel est considéré comme un produit de l’étape de lancement ?",
+    "options": [
+      "Choix des investissements",
+      "Définition des règles de participation et de sélection",
+      "Exécution des projets",
+      "Décaissement budgétaire"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Quel est le principal objectif des foras zonaux ?",
+    "options": [
+      "Consolider les besoins priorisés",
+      "Identifier les problèmes et prioriser les besoins locaux",
+      "Voter le budget",
+      "Exécuter les projets"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Quel produit résulte de la validation de l’assiette fiscale durant les foras zonaux?",
+    "options": [
+      "Mise en œuvre des investissements",
+      "Liste actualisée des ressources fiscales disponibles",
+      "Évaluation finale des projets réalisés",
+      "Définition des critères de suivi"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Qui sont désignés lors des foras zonaux ?",
+    "options": [
+      "Les responsables administratifs",
+      "Les délégués ou représentants des quartiers/zones",
+      "Les élus nationaux",
+      "Les membres de la commission d’évaluation"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Quel rôle joue le forum des délégués ?",
+    "options": [
+      "Superviser la mise en œuvre physique des projets",
+      "Consolider les besoins prioritaires et les ressources fiscales issues des quartiers",
+      "Organiser la communication",
+      "Procéder au vote du budget"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Quel comité est constitué à l’issue du forum des délégués ?",
+    "options": [
+      "Comité de pilotage des finances publiques",
+      "Comité de BP ou Comité Local de suivi et contrôle",
+      "Comité de réalisation des infrastructures",
+      "Conseil des citoyens"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "La définition consensuelle d’actions prioritaires à retenir a lieu lors de :",
+    "options": [
+      "L’étape d’exécution",
+      "Le forum des délégués",
+      "Le vote du budget",
+      "Le lancement de l’approche"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Le forum communal consiste principalement en une rencontre entre :",
+    "options": [
+      "Élus nationaux et administration centrale",
+      "Élus locaux et délégués pour choisir les investissements à prévoir au budget",
+      "Prestataires et entreprises locales",
+      "Associations partenaires"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Un produit du forum communal est :",
+    "options": [
+      "Le choix des investissements prioritaires selon les ressources disponibles",
+      "L’organisation des réunions sectorielles",
+      "La rédaction des comptes-rendus annuels",
+      "La désignation des membres du conseil local"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Lors du forum communal, quels critères doivent être définis ?",
+    "options": [
+      "Les critères de choix des quartiers d’implantation des projets",
+      "Les taux de satisfaction citoyenne",
+      "La grille salariale des agents",
+      "Les modalités de contrôle administratif"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Le vote du budget dans le processus participatif est réalisé par :",
+    "options": [
+      "Les services techniques",
+      "Le conseil local",
+      "Les citoyens individuellement",
+      "Le Comité de BP uniquement"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Lors du vote du budget, il s’agit essentiellement de :",
+    "options": [
+      "Mettre à disposition les ressources allouées",
+      "Approuver la liste définitive des investissements issus de la participation",
+      "Démarrer l’exécution des dépenses",
+      "Élaborer les bilans sociaux"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Avant le vote du budget, les investissements doivent être :",
+    "options": [
+      "Soumis à l’avis du conseil local",
+      "Exécutés à titre expérimental",
+      "Évalués uniquement par le comité local",
+      "Ajournés en attente de l’exercice suivant"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "L’étape d’exécution du budget consiste à :",
+    "options": [
+      "Réaliser concrètement les projets et investissements prévus au budget participatif",
+      "Organiser de nouvelles consultations",
+      "Lancer l’appel d’offres pour la prochaine année",
+      "Procéder uniquement à la reddition des comptes"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Le suivi et bilan du processus de budget participatif permettent de :",
+    "options": [
+      "Évaluer l’impact, la mise en œuvre et la conformité des réalisations avec les engagements pris",
+      "Redéfinir le montant du budget",
+      "Sélectionner de nouveaux représentants",
+      "Adopter le plan d’urbanisme"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Un des produits attendus à l’étape de suivi et bilan est :",
+    "options": [
+      "Un rapport d’évaluation détaillé sur la réalisation des actions retenues lors du BP",
+      "Un procès-verbal de la réunion d’ouverture",
+      "Un plan de communication",
+      "Une campagne de sensibilisation"
+    ],
+    "answer": "A"
+  },
+  {
+    "question": "Sans méthodes de facilitation efficaces, la « participation » risque de tourner à :",
+    "options": [
+      "Une prise de décision plus rapide",
+      "Des idées simplistes, manipulatrices, ou à une forme d'anarchie de groupe",
+      "Une meilleure cohésion spontanée du groupe"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Parmi les six hypothèses de base de la facilitation, laquelle repose sur l'idée que le travail d'équipe et la collaboration permettent d'obtenir de meilleurs résultats ?",
+    "options": [
+      "La créativité individuelle",
+      "Le travail et la collaboration",
+      "La réflexion"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "L'hypothèse « Consensus et appropriation » signifie que les facilitateurs s'efforcent d'arriver à :",
+    "options": [
+      "Des décisions imposées par le facilitateur",
+      "Des décisions que l'ensemble des membres du groupe s'approprie et soutient",
+      "Un vote majoritaire rapide"
+    ],
+    "answer": "B"
+  },
+  {
+    "question": "Selon le guide, l'apprentissage et les changements positifs dans un groupe ne peuvent se réaliser sans :",
+    "options": [
+      "Une réflexion approfondie",
+      "Une compétition entre participants",
+      "Une hiérarchie stricte"
+    ],
+    "answer": "B"
+  }
+]
