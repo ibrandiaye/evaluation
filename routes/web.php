@@ -22,4 +22,10 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('index');
     Route::get('/questions', [AdminController::class, 'questions'])->name('questions');
     Route::get('/evaluations/{evaluation}', [AdminController::class, 'show'])->name('show');
+    Route::delete('/evaluations/{evaluation}', [AdminController::class, 'destroyEvaluation'])->name('evaluations.destroy');
+
+    // Admin user management
+    Route::get('/admins', [AdminController::class, 'admins'])->name('admins');
+    Route::post('/admins', [AdminController::class, 'storeAdmin'])->name('admins.store');
+    Route::delete('/admins/{user}', [AdminController::class, 'destroyAdmin'])->name('admins.destroy');
 });

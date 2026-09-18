@@ -7,10 +7,22 @@
             <h2 class="text-2xl font-bold text-oidp-dark">Tableau de bord</h2>
             <p class="text-gray-500 text-sm">Résultats et statistiques des candidats</p>
         </div>
-        <a href="{{ route('admin.questions') }}" class="bg-oidp-blue hover:bg-oidp-blue-dark text-white px-4 py-2 rounded-lg font-medium transition">
-            📋 Voir les Questions
-        </a>
+        <div class="flex gap-2">
+            <a href="{{ route('admin.questions') }}" class="bg-oidp-blue hover:bg-oidp-blue-dark text-white px-4 py-2 rounded-lg font-medium transition text-sm">
+                📋 Questions
+            </a>
+            <a href="{{ route('admin.admins') }}" class="bg-oidp-dark hover:bg-gray-700 text-white px-4 py-2 rounded-lg font-medium transition text-sm">
+                👤 Administrateurs
+            </a>
+        </div>
     </div>
+
+    {{-- Flash Messages --}}
+    @if(session('success'))
+        <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-6 rounded-lg">
+            {{ session('success') }}
+        </div>
+    @endif
 
     {{-- Stats Cards --}}
     @php
@@ -62,9 +74,18 @@
                         </td>
                         <td class="px-5 py-4 border-b border-gray-200 text-sm text-gray-500">{{ $evaluation->created_at->format('d/m/Y H:i') }}</td>
                         <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">
-                            <a href="{{ route('admin.show', $evaluation->id) }}" class="bg-oidp-orange hover:bg-oidp-orange-dark text-white px-3 py-1 rounded text-xs font-bold transition">
-                                Voir détails
-                            </a>
+                            <div class="flex items-center justify-center gap-2">
+                                <a href="{{ route('admin.show', $evaluation->id) }}" class="bg-oidp-orange hover:bg-oidp-orange-dark text-white px-3 py-1 rounded text-xs font-bold transition">
+                                    Détails
+                                </a>
+                                <form action="{{ route('admin.evaluations.destroy', $evaluation->id) }}" method="POST" onsubmit="return confirm('Supprimer ce candidat et toutes ses réponses ?')">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-xs font-bold transition">
+                                        Supprimer
+                                    </button>
+                                </form>
+                            </div>
                         </td>
                     </tr>
                 @empty
