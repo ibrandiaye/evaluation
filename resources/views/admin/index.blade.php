@@ -1,60 +1,75 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="max-w-4xl mx-auto">
-    <div class="flex justify-between items-center mb-6">
-        <h2 class="text-2xl font-bold text-gray-800">Espace Administrateur - Statistiques</h2>
-        <a href="{{ route('admin.questions') }}" class="bg-blue-600 text-white px-4 py-2 rounded">Gérer les Questions</a>
+<div class="max-w-5xl mx-auto">
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+        <div>
+            <h2 class="text-2xl font-bold text-oidp-dark">Tableau de bord</h2>
+            <p class="text-gray-500 text-sm">Résultats et statistiques des candidats</p>
+        </div>
+        <a href="{{ route('admin.questions') }}" class="bg-oidp-blue hover:bg-oidp-blue-dark text-white px-4 py-2 rounded-lg font-medium transition">
+            📋 Voir les Questions
+        </a>
     </div>
 
-    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+    {{-- Stats Cards --}}
+    @php
+        $totalCandidates = $evaluations->count();
+        $avgScore = $totalCandidates > 0 ? $evaluations->avg(fn($e) => $e->total_questions > 0 ? ($e->score / $e->total_questions) * 100 : 0) : 0;
+        $passed = $evaluations->filter(fn($e) => $e->total_questions > 0 && ($e->score / $e->total_questions) >= 0.5)->count();
+    @endphp
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+        <div class="bg-white rounded-xl shadow p-5 border-l-4 border-oidp-orange">
+            <p class="text-gray-500 text-sm">Total Candidats</p>
+            <p class="text-3xl font-black text-oidp-dark">{{ $totalCandidates }}</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-5 border-l-4 border-oidp-blue">
+            <p class="text-gray-500 text-sm">Moyenne Générale</p>
+            <p class="text-3xl font-black text-oidp-blue">{{ number_format($avgScore, 0) }}%</p>
+        </div>
+        <div class="bg-white rounded-xl shadow p-5 border-l-4 border-green-500">
+            <p class="text-gray-500 text-sm">Réussite (≥ 50%)</p>
+            <p class="text-3xl font-black text-green-600">{{ $passed }} / {{ $totalCandidates }}</p>
+        </div>
+    </div>
+
+    {{-- Candidates Table --}}
+    <div class="bg-white rounded-xl shadow-md overflow-hidden">
         <table class="min-w-full leading-normal">
             <thead>
-                <tr>
-                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                        Candidat
-                    </th>
-                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                        Score
-                    </th>
-                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                        Pourcentage
-                    </th>
-                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                        Date
-                    </th>
-                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">
-                        Actions
-                    </th>
+                <tr class="bg-oidp-dark text-white">
+                    <th class="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wider">#</th>
+                    <th class="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wider">Candidat</th>
+                    <th class="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wider">Score</th>
+                    <th class="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wider">Pourcentage</th>
+                    <th class="px-5 py-3 text-left text-xs font-semibold uppercase tracking-wider">Date</th>
+                    <th class="px-5 py-3 text-center text-xs font-semibold uppercase tracking-wider">Actions</th>
                 </tr>
             </thead>
             <tbody>
-                @forelse($evaluations as $evaluation)
+                @forelse($evaluations as $i => $evaluation)
                     @php
                         $percentage = $evaluation->total_questions > 0 ? ($evaluation->score / $evaluation->total_questions) * 100 : 0;
                     @endphp
-                    <tr>
-                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                            <p class="text-gray-900 whitespace-no-wrap font-bold">{{ $evaluation->participant_name }}</p>
-                        </td>
-                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                            <p class="text-gray-900 whitespace-no-wrap">{{ $evaluation->score }} / {{ $evaluation->total_questions }}</p>
-                        </td>
-                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                            <p class="{{ $percentage >= 50 ? 'text-green-600' : 'text-red-600' }} font-bold">
+                    <tr class="hover:bg-orange-50 transition">
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-gray-500">{{ $i + 1 }}</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm font-bold text-oidp-dark">{{ $evaluation->participant_name }}</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">{{ $evaluation->score }} / {{ $evaluation->total_questions }}</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm">
+                            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold {{ $percentage >= 50 ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700' }}">
                                 {{ number_format($percentage, 0) }}%
-                            </p>
+                            </span>
                         </td>
-                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                            <p class="text-gray-900 whitespace-no-wrap">{{ $evaluation->created_at->format('d/m/Y H:i') }}</p>
-                        </td>
-                        <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-center">
-                            <a href="{{ route('admin.show', $evaluation->id) }}" class="text-blue-600 hover:text-blue-900">Voir détails</a>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-gray-500">{{ $evaluation->created_at->format('d/m/Y H:i') }}</td>
+                        <td class="px-5 py-4 border-b border-gray-200 text-sm text-center">
+                            <a href="{{ route('admin.show', $evaluation->id) }}" class="bg-oidp-orange hover:bg-oidp-orange-dark text-white px-3 py-1 rounded text-xs font-bold transition">
+                                Voir détails
+                            </a>
                         </td>
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="5" class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-center">
+                        <td colspan="6" class="px-5 py-8 text-center text-gray-400">
                             Aucune évaluation pour le moment.
                         </td>
                     </tr>
